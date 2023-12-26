@@ -44,6 +44,16 @@ export default function Textform(props) {
         navigator.clipboard.writeText(text1.value);
         props.showalert("text coppied","warning");
       }
+      const wordsLen= (count)=>{ 
+        if (count.length === 0) {
+          return 0;
+        } else {
+          count = count.toString().replace(/(^\s*)|(\s*$)/gi,"");
+          count = count.toString().replace(/[ ]{2,}/gi," ");
+          count = count.toString().replace(/\n /,"\n");
+          return count.split(' ').length; 
+        }
+      }
   return (
     <>
     <div>
@@ -60,7 +70,7 @@ export default function Textform(props) {
     </div>
           <div className={`my-3  text-${props.mode==='light'?'dark':'light'}`}>
               <h1>about text</h1>
-              <p>{text.split(" ").length} words {text.length}</p>
+              <p>{wordsLen(text)} words {text.length}</p>
 
           </div>
           

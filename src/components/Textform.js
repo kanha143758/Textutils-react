@@ -5,7 +5,7 @@ import React from 'react'
 
 
 export default function Textform(props) {
-        const [text,settext]=useState("Enter text here")
+        const [text,settext]=useState("")
         //const [btntxt,setbtntxt]=useState("convert to uppercase")
       
 
@@ -49,8 +49,8 @@ export default function Textform(props) {
     <div>
                   
           <div className={`mb-3  text-${props.mode==='light'?'dark':'light'}`}>
-            <label htmlFor="exampleFormControlTextarea1" className="form-label">Example textarea</label>
-            <textarea className="form-control" id="exampleFormControlTextarea1" style={{backgroundColor:props.mode==='light'?'white':'#042743', color:props.mode==='light'?'black':'white'}}value={text} onChange={handleonchange} rows="6"></textarea>
+            <label htmlFor="exampleFormControlTextarea1" className="form-label">Enter Text Below</label>
+            <textarea className="form-control" placeholder="Enter Your Text" id="exampleFormControlTextarea1" style={{backgroundColor:props.mode==='light'?'white':'#042743', color:props.mode==='light'?'black':'white'}}value={text} onChange={handleonchange} rows="6"></textarea>
           </div>
               <button className='btn btn-primary mx-2' onClick={handleupconvert}>convert to UpperCase</button>
               <button className='btn btn-primary mx-2' onClick={handleloconvert}>convert to LowerCase</button>

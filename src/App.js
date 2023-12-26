@@ -84,7 +84,7 @@ const removebodyclasses= ()=>{
 
     </>*/
     <>
-    <Navbar tittle="Textutils" mode={mode} togglemode={togglemode} />
+   // <Navbar tittle="Textutils" mode={mode} togglemode={togglemode} />
 <Alert alert={alert}/>
 <div className='container'>
 <Textform mode={mode} showalert={showalert}/>

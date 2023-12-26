@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import './App.css';
 //import About from './components/About';
-//import Navbar from './components/Navbar';
+import Navbar from './components/Navbar';
 import Textform from './components/Textform';
 import Alert from './components/Alert';
 /*import {
@@ -84,7 +84,7 @@ const removebodyclasses= ()=>{
 
     </>*/
     <>
-   
+    <Navbar tittle="Textutils" mode={mode} togglemode={togglemode} />
 <Alert alert={alert}/>
 <div className='container'>
 <Textform mode={mode} showalert={showalert}/>
